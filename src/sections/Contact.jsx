@@ -3,7 +3,7 @@ import { personalInfo } from "../data/portfolioData";
 
 function Contact() {
   return (
-    <section className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center">
+    <section id="contact" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
