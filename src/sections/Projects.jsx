@@ -39,11 +39,16 @@ function Projects() {
               project.flagship ? "border-purple-500" : "border-neutral-800"
             }`}
           >
-            {project.flagship && (
-              <span className="text-xs uppercase tracking-wide bg-purple-600 text-white px-3 py-1 rounded-full mb-4 inline-block">
-                Flagship Project
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.flagship && (
+                <span className="text-xs uppercase tracking-wide bg-purple-600 text-white px-3 py-1 rounded-full inline-block">
+                  Flagship Project
+                </span>
+              )}
+              <span className="text-xs text-neutral-500 border border-neutral-700 px-3 py-1 rounded-full inline-block">
+                {project.status}
               </span>
-            )}
+            </div>
 
             <h3 className="text-2xl font-bold text-white mb-1">
               {project.title}

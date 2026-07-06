@@ -66,19 +66,17 @@ function Hero() {
         className="flex gap-4"
       >
         <a
-          href={personalInfo.github}
-          target="_blank"
-          rel="noreferrer"
+          href="#projects"
           className="px-6 py-3 bg-purple-600 hover:bg-purple-500 transition rounded-full text-white font-medium"
         >
-          View GitHub
+          See My Work
         </a>
 
         <a
-          href="#projects"
+          href="#contact"
           className="px-6 py-3 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white font-medium"
         >
-          See Projects
+          Get In Touch
         </a>
       </motion.div>
     </section>

@@ -7,7 +7,7 @@ export const personalInfo = {
   location: "India",
   github: "https://github.com/ashmita-dev",
   linkedin: "https://www.linkedin.com/in/ashmita-mazumdar-009863394/",
-  resume: "", 
+  resume: "",
 };
 
 export const about = {
@@ -47,6 +47,7 @@ export const projects = [
     liveLink: "https://career-copilot-frontend.onrender.com",
     githubLink: "https://github.com/ashmita-dev/career-copilot",
     flagship: true,
+    status: "Actively maintained",
   },
   {
     id: 2,
@@ -59,6 +60,7 @@ export const projects = [
     liveLink: "",
     githubLink: "https://github.com/ashmita-dev/event-management-portal",
     flagship: false,
+    status: "Currently being rebuilt",
   },
   {
     id: 3,
@@ -71,6 +73,7 @@ export const projects = [
     liveLink: "",
     githubLink: "https://github.com/ashmita-dev/SneakerDB",
     flagship: false,
+    status: "Stable, occasionally poked at 2am",
   },
 ];
 
