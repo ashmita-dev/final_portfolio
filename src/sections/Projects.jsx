@@ -31,10 +31,10 @@ function Projects() {
         {projects.map((project, i) => (
           <motion.div
             key={project.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: i % 2 === 0 ? -80 : 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className={`bg-neutral-900 border rounded-2xl p-8 ${
               project.flagship ? "border-purple-500" : "border-neutral-800"
             }`}
@@ -49,7 +49,9 @@ function Projects() {
               {project.title}
             </h3>
 
-            <p className="text-neutral-400 mb-4">{project.subtitle}</p>
+            <p className="text-neutral-400 mb-4">
+              {project.subtitle}
+            </p>
 
             <p className="text-neutral-300 mb-4">
               {project.description}

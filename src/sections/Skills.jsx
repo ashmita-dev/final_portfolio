@@ -36,23 +36,27 @@ function Skills() {
         {categories.map((category, i) => (
           <motion.div
             key={category.label}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.75, rotate: i % 2 === 0 ? -4 : 4 }}
+            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
             className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6"
           >
             <h3 className="text-lg font-semibold text-purple-400 mb-4">
               {category.label}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {category.items.map((item) => (
-                <span
+              {category.items.map((item, j) => (
+                <motion.span
                   key={item}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: i * 0.15 + 0.3 + j * 0.04 }}
                   className="text-sm bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full"
                 >
                   {item}
-                </span>
+                </motion.span>
               ))}
             </div>
           </motion.div>

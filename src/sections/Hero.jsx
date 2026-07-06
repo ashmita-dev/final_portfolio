@@ -1,10 +1,27 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { personalInfo } from "../data/portfolioData";
 
 function Hero() {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const glowY = useTransform(scrollYProgress, [0, 1], [0, 150]);
+
   return (
-    <section id="hero" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
-      <div className="absolute w-96 h-96 bg-purple-600/20 rounded-full blur-3xl top-10 left-1/3" />
+    <section
+      id="hero"
+      ref={ref}
+      className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden"
+    >
+      <motion.div
+        style={{ y: glowY }}
+        className="absolute w-96 h-96 bg-purple-600/20 rounded-full blur-3xl top-10 left-1/3"
+      />
 
       <motion.p
         initial={{ opacity: 0, y: 10 }}

@@ -15,30 +15,30 @@ function About() {
       </motion.h2>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -60 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.1 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
         className="max-w-2xl text-neutral-300 text-lg mb-4 text-center"
       >
         {about.bio}
       </motion.p>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 60 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
         className="max-w-2xl text-purple-400 italic text-center mb-16"
       >
         {about.wittyLine}
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 40, rotate: -1 }}
+        whileInView={{ opacity: 1, y: 0, rotate: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
         className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 max-w-2xl w-full"
       >
         <h3 className="text-xl font-semibold text-white mb-2">
@@ -48,13 +48,17 @@ function About() {
         <p className="text-neutral-500 mb-6">{about.education.graduation}</p>
 
         <div className="flex flex-wrap gap-2">
-          {about.education.coursework.map((course) => (
-            <span
+          {about.education.coursework.map((course, i) => (
+            <motion.span
               key={course}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: 0.3 + i * 0.05 }}
               className="text-sm bg-neutral-800 text-neutral-300 px-3 py-1 rounded-full"
             >
               {course}
-            </span>
+            </motion.span>
           ))}
         </div>
       </motion.div>
