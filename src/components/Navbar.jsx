@@ -43,7 +43,7 @@ function Navbar() {
           <a
             key={link.label}
             href={link.href}
-            className="text-neutral-300 hover:text-purple-400 transition text-sm font-medium"
+            className="text-neutral-300 hover:text-amber-400 transition text-sm font-medium"
           >
             {link.label}
           </a>
@@ -55,10 +55,11 @@ function Navbar() {
           href={personalInfo.github}
           target="_blank"
           rel="noreferrer"
-          className="text-sm px-4 py-2 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white block"
+          className="text-sm px-4 py-2 border border-neutral-600 hover:border-amber-400 transition rounded-full text-white block"
         >
           GitHub
         </MagneticButton>
+
         <span className="absolute top-full right-0 mt-2 text-xs text-neutral-400 whitespace-nowrap opacity-0 group-hover:opacity-100 transition pointer-events-none">
           where the commits actually live
         </span>

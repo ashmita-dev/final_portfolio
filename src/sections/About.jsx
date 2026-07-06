@@ -4,16 +4,16 @@ import { about } from "../data/portfolioData";
 function About() {
   return (
     <section id="about" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-900/30 via-neutral-950 to-neutral-950" />
-      <div className="absolute w-[550px] h-[550px] bg-indigo-600/25 rounded-full blur-[100px] -top-20 -right-40" />
-      <div className="absolute w-96 h-96 bg-purple-600/25 rounded-full blur-[100px] bottom-10 -left-20" />
-      <div className="absolute w-64 h-64 bg-fuchsia-500/20 rounded-full blur-[80px] top-1/2 right-1/3" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-amber-900/20 via-neutral-950 to-neutral-950" />
+      <div className="absolute w-[550px] h-[550px] bg-amber-600/20 rounded-full blur-[100px] -top-20 -right-40" />
+      <div className="absolute w-96 h-96 bg-amber-500/20 rounded-full blur-[100px] bottom-10 -left-20" />
+      <div className="absolute w-64 h-64 bg-orange-500/15 rounded-full blur-[80px] top-1/2 right-1/3" />
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-10 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
+        className="text-4xl font-bold mb-10 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
         About Me
       </motion.h2>
@@ -33,7 +33,7 @@ function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-        className="max-w-2xl text-purple-400 italic text-center mb-16"
+        className="max-w-2xl text-amber-400 italic text-center mb-16"
       >
         {about.wittyLine}
       </motion.p>

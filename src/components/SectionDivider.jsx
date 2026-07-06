@@ -8,7 +8,7 @@ function SectionDivider() {
         whileInView={{ width: "60%", opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
+        className="h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent"
       />
     </div>
   );

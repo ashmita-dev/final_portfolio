@@ -4,15 +4,15 @@ import { projects } from "../data/portfolioData";
 function Projects() {
   return (
     <section id="projects" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-violet-900/30 via-neutral-950 to-neutral-950" />
-      <div className="absolute w-[500px] h-[500px] bg-violet-600/25 rounded-full blur-[100px] top-10 right-1/4" />
-      <div className="absolute w-72 h-72 bg-indigo-600/25 rounded-full blur-[100px] bottom-0 left-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-amber-900/20 via-neutral-950 to-neutral-950" />
+      <div className="absolute w-[500px] h-[500px] bg-amber-600/20 rounded-full blur-[100px] top-10 right-1/4" />
+      <div className="absolute w-72 h-72 bg-amber-500/20 rounded-full blur-[100px] bottom-0 left-10" />
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
+        className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
         Projects
       </motion.h2>
@@ -22,7 +22,7 @@ function Projects() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-purple-400 italic mb-14 text-center max-w-xl"
+        className="text-amber-400 italic mb-14 text-center max-w-xl"
       >
         Exhibit A: proof that ideas survive contact with real users.
       </motion.p>
@@ -36,12 +36,12 @@ function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className={`bg-neutral-900 border rounded-2xl p-8 ${
-              project.flagship ? "border-purple-500" : "border-neutral-800"
+              project.flagship ? "border-amber-500" : "border-neutral-800"
             }`}
           >
             <div className="flex flex-wrap gap-2 mb-4">
               {project.flagship && (
-                <span className="text-xs uppercase tracking-wide bg-purple-600 text-white px-3 py-1 rounded-full inline-block">
+                <span className="text-xs uppercase tracking-wide bg-amber-600 text-white px-3 py-1 rounded-full inline-block">
                   Flagship Project
                 </span>
               )}
@@ -62,7 +62,7 @@ function Projects() {
               {project.description}
             </p>
 
-            <p className="text-purple-400 italic mb-6">
+            <p className="text-amber-400 italic mb-6">
               {project.wittyLine}
             </p>
 
@@ -83,7 +83,7 @@ function Projects() {
                   href={project.liveLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-2 bg-purple-600 hover:bg-purple-500 transition rounded-full text-white text-sm font-medium"
+                  className="px-5 py-2 bg-amber-600 hover:bg-amber-500 transition rounded-full text-white text-sm font-medium"
                 >
                   Live Demo
                 </a>
@@ -93,7 +93,7 @@ function Projects() {
                 href={project.githubLink}
                 target="_blank"
                 rel="noreferrer"
-                className="px-5 py-2 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white text-sm font-medium"
+                className="px-5 py-2 border border-neutral-600 hover:border-amber-400 transition rounded-full text-white text-sm font-medium"
               >
                 GitHub
               </a>

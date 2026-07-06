@@ -17,7 +17,7 @@ function CursorGlow() {
       className="fixed top-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none z-0"
       style={{
         background:
-          "radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(168,85,247,0) 70%)",
+          "radial-gradient(circle, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0) 70%)",
       }}
       animate={{
         x: position.x - 250,
