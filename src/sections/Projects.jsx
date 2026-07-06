@@ -4,8 +4,9 @@ import { projects } from "../data/portfolioData";
 function Projects() {
   return (
     <section id="projects" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
-      <div className="absolute w-[450px] h-[450px] bg-violet-600/10 rounded-full blur-3xl top-10 right-1/4" />
-      <div className="absolute w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl bottom-0 left-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-violet-900/30 via-neutral-950 to-neutral-950" />
+      <div className="absolute w-[500px] h-[500px] bg-violet-600/25 rounded-full blur-[100px] top-10 right-1/4" />
+      <div className="absolute w-72 h-72 bg-indigo-600/25 rounded-full blur-[100px] bottom-0 left-10" />
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

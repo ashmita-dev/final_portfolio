@@ -12,8 +12,13 @@ const categories = [
 function Skills() {
   return (
     <section id="skills" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
-      <div className="absolute w-96 h-96 bg-fuchsia-600/10 rounded-full blur-3xl top-1/4 -left-32" />
-      <div className="absolute w-80 h-80 bg-purple-600/10 rounded-full blur-3xl -bottom-20 right-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-fuchsia-900/30 via-neutral-950 to-neutral-950" />
+      <div className="absolute w-[450px] h-[450px] bg-fuchsia-600/25 rounded-full blur-[100px] top-1/4 -left-32" />
+      <div className="absolute w-96 h-96 bg-purple-600/25 rounded-full blur-[100px] -bottom-20 right-0" />
+      <div className="absolute inset-0 opacity-[0.1]" style={{
+        backgroundImage: "linear-gradient(rgba(217,70,239,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(217,70,239,0.3) 1px, transparent 1px)",
+        backgroundSize: "50px 50px"
+      }} />
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

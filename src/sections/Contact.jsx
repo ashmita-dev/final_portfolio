@@ -5,7 +5,9 @@ import MagneticButton from "../components/MagneticButton";
 function Contact() {
   return (
     <section id="contact" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center relative overflow-hidden">
-      <div className="absolute w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-3xl top-1/3 left-1/2 -translate-x-1/2" /> 
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-purple-900/40 via-neutral-950 to-neutral-950" />
+      <div className="absolute w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[100px] top-1/3 left-1/2 -translate-x-1/2" />
+      <div className="absolute w-72 h-72 bg-fuchsia-600/20 rounded-full blur-[90px] bottom-0 right-1/4" /> 
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

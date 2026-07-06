@@ -4,8 +4,10 @@ import { about } from "../data/portfolioData";
 function About() {
   return (
     <section id="about" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
-      <div className="absolute w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-3xl -top-20 -right-40" />
-      <div className="absolute w-72 h-72 bg-purple-600/10 rounded-full blur-3xl bottom-10 -left-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-900/30 via-neutral-950 to-neutral-950" />
+      <div className="absolute w-[550px] h-[550px] bg-indigo-600/25 rounded-full blur-[100px] -top-20 -right-40" />
+      <div className="absolute w-96 h-96 bg-purple-600/25 rounded-full blur-[100px] bottom-10 -left-20" />
+      <div className="absolute w-64 h-64 bg-fuchsia-500/20 rounded-full blur-[80px] top-1/2 right-1/3" />
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
