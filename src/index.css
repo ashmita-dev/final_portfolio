@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
+}
+
 body {
   position: relative;
 }

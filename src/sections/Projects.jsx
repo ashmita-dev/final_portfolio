@@ -3,16 +3,20 @@ import { projects } from "../data/portfolioData";
 
 function Projects() {
   return (
-    <section id="projects" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
+    <section
+      id="projects"
+      className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-amber-900/20 via-neutral-950 to-neutral-950" />
       <div className="absolute w-[500px] h-[500px] bg-amber-600/20 rounded-full blur-[100px] top-10 right-1/4" />
       <div className="absolute w-72 h-72 bg-amber-500/20 rounded-full blur-[100px] bottom-0 left-10" />
+
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
+        className="relative text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
         Projects
       </motion.h2>
@@ -22,12 +26,12 @@ function Projects() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-amber-400 italic mb-14 text-center max-w-xl"
+        className="relative text-amber-400 italic mb-14 text-center max-w-xl"
       >
         Exhibit A: proof that ideas survive contact with real users.
       </motion.p>
 
-      <div className="flex flex-col gap-8 max-w-4xl w-full">
+      <div className="relative flex flex-col gap-8 max-w-4xl w-full">
         {projects.map((project, i) => (
           <motion.div
             key={project.id}
@@ -45,6 +49,7 @@ function Projects() {
                   Flagship Project
                 </span>
               )}
+
               <span className="text-xs text-neutral-500 border border-neutral-700 px-3 py-1 rounded-full inline-block">
                 {project.status}
               </span>
@@ -77,7 +82,7 @@ function Projects() {
               ))}
             </div>
 
-            <div className="flex gap-4">
+            <div className="relative flex gap-4">
               {project.liveLink && (
                 <a
                   href={project.liveLink}

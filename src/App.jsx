@@ -7,11 +7,13 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
     <div className="bg-neutral-950 relative">
       <CursorGlow />
+      <CustomCursor />
       <Navbar />
       <Avatar />
       <Hero />

@@ -8,12 +8,13 @@ function About() {
       <div className="absolute w-[550px] h-[550px] bg-amber-600/20 rounded-full blur-[100px] -top-20 -right-40" />
       <div className="absolute w-96 h-96 bg-amber-500/20 rounded-full blur-[100px] bottom-10 -left-20" />
       <div className="absolute w-64 h-64 bg-orange-500/15 rounded-full blur-[80px] top-1/2 right-1/3" />
+
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-10 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
+        className="relative text-4xl font-bold mb-10 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
         About Me
       </motion.h2>
@@ -23,7 +24,7 @@ function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="max-w-2xl text-neutral-300 text-lg mb-4 text-center"
+        className="relative max-w-2xl text-neutral-300 text-lg mb-4 text-center"
       >
         {about.bio}
       </motion.p>
@@ -33,7 +34,7 @@ function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-        className="max-w-2xl text-amber-400 italic text-center mb-16"
+        className="relative max-w-2xl text-amber-400 italic text-center mb-16"
       >
         {about.wittyLine}
       </motion.p>
@@ -43,7 +44,7 @@ function About() {
         whileInView={{ opacity: 1, y: 0, rotate: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 max-w-2xl w-full"
+        className="relative bg-neutral-900 border border-neutral-800 rounded-2xl p-8 max-w-2xl w-full"
       >
         <h3 className="text-xl font-semibold text-white mb-2">
           {about.education.degree}

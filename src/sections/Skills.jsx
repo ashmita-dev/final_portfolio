@@ -19,12 +19,13 @@ function Skills() {
         backgroundImage: "linear-gradient(rgba(245,158,11,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.25) 1px, transparent 1px)",
         backgroundSize: "50px 50px"
       }} />
+
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
+        className="relative text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
         Skills
       </motion.h2>
@@ -34,12 +35,12 @@ function Skills() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-amber-400 italic mb-14 text-center max-w-xl"
+        className="relative text-amber-400 italic mb-14 text-center max-w-xl"
       >
         These are the tools I trust not to betray me at 2am before a deadline.
       </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full">
         {categories.map((category, i) => (
           <motion.div
             key={category.label}
@@ -69,12 +70,13 @@ function Skills() {
           </motion.div>
         ))}
       </div>
+
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="text-neutral-600 text-sm mt-12 text-center"
+        className="relative text-neutral-600 text-sm mt-12 text-center"
       >
         Not shown: the 40 browser tabs open at all times, mostly Stack Overflow.
       </motion.p>

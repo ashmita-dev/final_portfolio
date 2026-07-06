@@ -37,7 +37,7 @@ function Avatar() {
   return (
     <>
       <motion.div
-        className="fixed bottom-0 right-4 md:right-16 z-40"
+        className="fixed bottom-0 right-4 md:right-16 z-40 pointer-events-none"
         animate={{ y: [0, -14, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
@@ -70,7 +70,7 @@ function Avatar() {
         </div>
       </motion.div>
 
-      <div className="fixed bottom-0 left-0 w-full z-30 sm:hidden">
+      <div className="fixed bottom-0 left-0 w-full z-30 sm:hidden pointer-events-none">
         <AnimatePresence mode="wait">
           <motion.div
             key={line}
