@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { skills } from "../data/portfolioData";
+import TechStack from "../components/TechStack";
 
 const categories = [
   { label: "Frontend", items: skills.frontend },
@@ -8,6 +9,14 @@ const categories = [
   { label: "Tools", items: skills.tools },
   { label: "Languages", items: skills.languages },
 ];
+
+const allTech = [...new Set([
+  ...skills.frontend,
+  ...skills.backend,
+  ...skills.database,
+  ...skills.tools,
+  ...skills.languages,
+])];
 
 function Skills() {
   return (
@@ -35,10 +44,14 @@ function Skills() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="relative text-amber-400 italic mb-14 text-center max-w-xl"
+        className="relative text-amber-400 italic mb-10 text-center max-w-xl"
       >
         These are the tools I trust not to betray me at 2am before a deadline.
       </motion.p>
+
+      <div className="relative mb-16">
+        <TechStack items={allTech} />
+      </div>
 
       <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl w-full">
         {categories.map((category, i) => (

@@ -86,3 +86,36 @@ export const achievements = [
   "Second Prize – Python Mini Project Competition",
   "Yugantar 2.0 Inter-Institute Hackathon (SIH 2025 Round-1 Selection)",
 ];
+
+export const timeline = [
+  {
+    year: "Expected 2028",
+    title: "B.Tech in Computer Science",
+    subtitle: "SVKM's NMIMS MPSTME, Shirpur Campus",
+    type: "education",
+  },
+  {
+    year: "Ongoing",
+    title: "JP Morgan Chase Software Engineering Virtual Experience",
+    subtitle: "Forage",
+    type: "certification",
+  },
+  {
+    year: "Ongoing",
+    title: "Microsoft Learn Cloud Computing Certifications & Badges",
+    subtitle: "Microsoft Learn",
+    type: "certification",
+  },
+  {
+    year: "Recent",
+    title: "Second Prize — Python Mini Project Competition",
+    subtitle: "College Competition",
+    type: "achievement",
+  },
+  {
+    year: "Recent",
+    title: "Yugantar 2.0 Inter-Institute Hackathon",
+    subtitle: "SIH 2025 Round-1 Selection",
+    type: "achievement",
+  },
+];

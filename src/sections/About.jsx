@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { about } from "../data/portfolioData";
+import { about, timeline } from "../data/portfolioData";
+import Timeline from "../components/Timeline";
 
 function About() {
   return (
@@ -44,7 +45,7 @@ function About() {
         whileInView={{ opacity: 1, y: 0, rotate: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="relative bg-neutral-900 border border-neutral-800 rounded-2xl p-8 max-w-2xl w-full"
+        className="relative bg-neutral-900 border border-neutral-800 rounded-2xl p-8 max-w-2xl w-full mb-16"
       >
         <h3 className="text-xl font-semibold text-white mb-2">
           {about.education.degree}
@@ -67,6 +68,18 @@ function About() {
           ))}
         </div>
       </motion.div>
+
+      <motion.h3
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative text-2xl font-semibold text-white mb-8 text-center"
+      >
+        Milestones
+      </motion.h3>
+
+      <Timeline items={timeline} />
     </section>
   );
 }
