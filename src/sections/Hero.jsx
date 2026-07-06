@@ -37,7 +37,7 @@ function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15 }}
-        className="text-5xl md:text-7xl font-bold text-white mb-4"
+        className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent"
       >
         {personalInfo.name}
       </motion.h1>

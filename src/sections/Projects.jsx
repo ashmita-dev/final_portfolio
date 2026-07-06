@@ -3,16 +3,15 @@ import { projects } from "../data/portfolioData";
 
 function Projects() {
   return (
-    <section
-      id="projects"
-      className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24"
-    >
+    <section id="projects" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
+      <div className="absolute w-[450px] h-[450px] bg-violet-600/10 rounded-full blur-3xl top-10 right-1/4" />
+      <div className="absolute w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl bottom-0 left-10" />
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-white mb-4"
+        className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
       >
         Projects
       </motion.h2>

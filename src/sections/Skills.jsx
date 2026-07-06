@@ -11,13 +11,15 @@ const categories = [
 
 function Skills() {
   return (
-    <section id="skills" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24">
+    <section id="skills" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
+      <div className="absolute w-96 h-96 bg-fuchsia-600/10 rounded-full blur-3xl top-1/4 -left-32" />
+      <div className="absolute w-80 h-80 bg-purple-600/10 rounded-full blur-3xl -bottom-20 right-0" />
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-white mb-4"
+        className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
       >
         Skills
       </motion.h2>

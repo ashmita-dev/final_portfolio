@@ -4,16 +4,14 @@ import MagneticButton from "../components/MagneticButton";
 
 function Contact() {
   return (
-    <section
-      id="contact"
-      className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center"
-    >
+    <section id="contact" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center relative overflow-hidden">
+      <div className="absolute w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-3xl top-1/3 left-1/2 -translate-x-1/2" /> 
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-white mb-4"
+        className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
       >
         Let's Connect
       </motion.h2>
