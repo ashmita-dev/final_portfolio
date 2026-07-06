@@ -3,7 +3,10 @@ import { personalInfo } from "../data/portfolioData";
 
 function Contact() {
   return (
-    <section id="contact" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center">
+    <section
+      id="contact"
+      className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +32,7 @@ function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="flex flex-col md:flex-row gap-4 mb-10"
+        className="flex flex-col md:flex-row gap-4 mb-4"
       >
         <a
           href={`mailto:${personalInfo.email}`}
@@ -45,6 +48,16 @@ function Contact() {
           {personalInfo.phone}
         </a>
       </motion.div>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.25 }}
+        className="text-neutral-600 text-xs mb-10"
+      >
+        Response time: usually faster than my code reviews.
+      </motion.p>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
