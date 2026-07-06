@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Avatar from "./components/Avatar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="bg-neutral-950">
       <Navbar />
+      <Avatar />
       <Hero />
       <About />
       <Skills />
