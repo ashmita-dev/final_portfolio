@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { personalInfo } from "../data/portfolioData";
+import MagneticButton from "../components/MagneticButton";
 
 function Hero() {
   const ref = useRef(null);
@@ -65,19 +66,19 @@ function Hero() {
         transition={{ duration: 0.8, delay: 0.7 }}
         className="flex gap-4"
       >
-        <a
+        <MagneticButton
           href="#projects"
-          className="px-6 py-3 bg-purple-600 hover:bg-purple-500 transition rounded-full text-white font-medium"
+          className="px-6 py-3 bg-purple-600 hover:bg-purple-500 transition rounded-full text-white font-medium inline-block"
         >
           See My Work
-        </a>
+        </MagneticButton>
 
-        <a
+        <MagneticButton
           href="#contact"
-          className="px-6 py-3 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white font-medium"
+          className="px-6 py-3 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white font-medium inline-block"
         >
           Get In Touch
-        </a>
+        </MagneticButton>
       </motion.div>
     </section>
   );

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/portfolioData";
+import MagneticButton from "../components/MagneticButton";
 
 function Contact() {
   return (
@@ -34,19 +35,19 @@ function Contact() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex flex-col md:flex-row gap-4 mb-4"
       >
-        <a
+        <MagneticButton
           href={`mailto:${personalInfo.email}`}
           className="px-6 py-3 bg-purple-600 hover:bg-purple-500 transition rounded-full text-white font-medium"
         >
           {personalInfo.email}
-        </a>
+        </MagneticButton>
 
-        <a
+        <MagneticButton
           href={`tel:${personalInfo.phone}`}
           className="px-6 py-3 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white font-medium"
         >
           {personalInfo.phone}
-        </a>
+        </MagneticButton>
       </motion.div>
 
       <motion.p
@@ -66,23 +67,23 @@ function Contact() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex gap-4 mb-10"
       >
-        <a
+        <MagneticButton
           href={personalInfo.github}
           target="_blank"
           rel="noreferrer"
           className="px-6 py-3 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white font-medium"
         >
           GitHub
-        </a>
+        </MagneticButton>
 
-        <a
+        <MagneticButton
           href={personalInfo.linkedin}
           target="_blank"
           rel="noreferrer"
           className="px-6 py-3 border border-neutral-600 hover:border-purple-400 transition rounded-full text-white font-medium"
         >
           LinkedIn
-        </a>
+        </MagneticButton>
       </motion.div>
 
       <motion.p
