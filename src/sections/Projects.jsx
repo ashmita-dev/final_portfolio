@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "../data/portfolioData";
+import TiltCard from "../components/TiltCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectCard({ project }) {
   return (
     <div className="w-[85vw] sm:w-[70vw] md:w-[50vw] lg:w-[40vw] shrink-0 px-4">
-      <div
+      <TiltCard
         className={`bg-neutral-900 border rounded-2xl p-8 h-full ${
           project.flagship ? "border-amber-500" : "border-neutral-800"
         }`}
@@ -74,7 +75,7 @@ function ProjectCard({ project }) {
             GitHub
           </a>
         </div>
-      </div>
+      </TiltCard>
     </div>
   );
 }
@@ -148,7 +149,6 @@ function Projects() {
         </motion.p>
       </div>
 
-      {/* Desktop: horizontal scrolling */}
       <div
         ref={trackRef}
         className="relative flex flex-col md:flex-row gap-8 md:gap-0 px-6 md:px-16 pb-16 md:pb-0"

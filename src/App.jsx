@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import Avatar from "./components/Avatar";
 import CursorGlow from "./components/CursorGlow";
 import SectionDivider from "./components/SectionDivider";
 import Hero from "./sections/Hero";
@@ -10,7 +9,6 @@ import Contact from "./sections/Contact";
 import CustomCursor from "./components/CustomCursor";
 import ScrollToTop from "./components/ScrollToTop";
 import CommandPalette from "./components/CommandPalette";
-import NowWidget from "./components/NowWidget";
 import EasterEgg from "./components/EasterEgg";
 import Marquee from "./components/Marquee";
 
@@ -21,7 +19,6 @@ function App() {
       <CustomCursor />
       <ScrollToTop />
       <Navbar />
-      <Avatar />
       <Hero />
       <Marquee
         items={[
@@ -42,7 +39,6 @@ function App() {
       <SectionDivider />
       <Contact />
       <CommandPalette />
-      <NowWidget />
       <EasterEgg />
     </div>
   );

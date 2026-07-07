@@ -11,8 +11,27 @@ export const personalInfo = {
 };
 
 export const about = {
-  bio: "I'm a Computer Science student who enjoys building full-stack web applications that solve real problems. I like creating products that are both technically strong and visually appealing.",
+  bio: "I'm a Computer Science student who enjoys building full-stack web applications that solve real problems — not just checkbox projects, but things people would actually use.",
+  extendedBio: "My focus is on the full pipeline: designing clean database schemas, building REST APIs that don't fall over under real use, and wiring it all up to interfaces people actually enjoy using. I care as much about the query plan behind a feature as I do about the pixel spacing in front of it.",
   wittyLine: "I studied Computer Science. I minored in overthinking every semicolon.",
+  highlights: [
+    {
+      title: "Full-Stack Development",
+      description: "React front-ends paired with Node.js/Express back-ends, built as one connected system, not two disjointed halves.",
+    },
+    {
+      title: "Database Architecture",
+      description: "Designing relational schemas in PostgreSQL and SQL Server that stay clean even as features stack up.",
+    },
+    {
+      title: "API Design",
+      description: "Building REST APIs with proper auth (JWT), sensible error handling, and documentation that doesn't lie.",
+    },
+    {
+      title: "Problem-First Thinking",
+      description: "Starting from the actual user problem before touching a single line of code — CS taught me the theory, projects taught me the judgment.",
+    },
+  ],
   education: {
     degree: "B.Tech in Computer Science",
     school: "SVKM's NMIMS MPSTME, Shirpur Campus",
