@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Award, Trophy } from "lucide-react";
+import { GraduationCap, Award, Trophy, Eye } from "lucide-react";
+import CertificateModal from "./CertificateModal";
 
 const typeConfig = {
   education: { icon: GraduationCap, color: "bg-amber-500" },
@@ -8,6 +10,8 @@ const typeConfig = {
 };
 
 function Timeline({ items }) {
+  const [activeCert, setActiveCert] = useState(null);
+
   return (
     <div className="relative max-w-2xl w-full">
       <div className="absolute left-[15px] top-2 bottom-2 w-px bg-neutral-800" />
@@ -15,6 +19,8 @@ function Timeline({ items }) {
         {items.map((item, i) => {
           const config = typeConfig[item.type] || typeConfig.education;
           const Icon = config.icon;
+          const hasCert = Boolean(item.certificate);
+
           return (
             <motion.div
               key={i}
@@ -27,10 +33,23 @@ function Timeline({ items }) {
               <div className={`relative z-10 flex items-center justify-center w-8 h-8 rounded-full ${config.color} shrink-0`}>
                 <Icon size={16} className="text-neutral-950" />
               </div>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl px-5 py-4 flex-1">
-                <p className="text-xs text-amber-400 uppercase tracking-wide mb-1">
-                  {item.year}
-                </p>
+
+              <div
+                onClick={() => hasCert && setActiveCert(item)}
+                className={`group bg-neutral-900 border border-neutral-800 rounded-2xl px-5 py-4 flex-1 transition ${
+                  hasCert ? "cursor-pointer hover:border-amber-500/60" : ""
+                }`}
+              >
+                <div className="flex items-center justify-between gap-3 mb-1">
+                  <p className="text-xs text-amber-400 uppercase tracking-wide">
+                    {item.label}
+                  </p>
+                  {hasCert && (
+                    <span className="flex items-center gap-1 text-xs text-neutral-500 group-hover:text-amber-400 transition">
+                      <Eye size={14} /> View
+                    </span>
+                  )}
+                </div>
                 <h4 className="text-white font-semibold mb-1">{item.title}</h4>
                 <p className="text-neutral-400 text-sm">{item.subtitle}</p>
               </div>
@@ -38,6 +57,12 @@ function Timeline({ items }) {
           );
         })}
       </div>
+
+      <CertificateModal
+        image={activeCert?.certificate}
+        title={activeCert?.title}
+        onClose={() => setActiveCert(null)}
+      />
     </div>
   );
 }

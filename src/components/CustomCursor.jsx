@@ -32,7 +32,7 @@ function CustomCursor() {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 rounded-full border-2 border-amber-400 pointer-events-none z-[100] hidden md:block"
+        className="fixed top-0 left-0 rounded-full border-2 border-amber-400 pointer-events-none  z-[300] hidden md:block"
         animate={{
           x: position.x - (isHovering ? 24 : 12),
           y: position.y - (isHovering ? 24 : 12),
@@ -43,7 +43,7 @@ function CustomCursor() {
         transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.4 }}
       />
       <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-amber-400 pointer-events-none z-[100] hidden md:block"
+        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-amber-400 pointer-events-none  z-[300] hidden md:block"
         animate={{
           x: position.x - 3,
           y: position.y - 3,

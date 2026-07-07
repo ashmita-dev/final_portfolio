@@ -54,6 +54,7 @@ function Navbar() {
           >
             GitHub
           </MagneticButton>
+          <span className="hidden lg:block text-xs text-neutral-500 border border-neutral-700 rounded px-2 py-1">⌘K</span>
           <span className="absolute top-full right-0 mt-2 text-xs text-neutral-400 whitespace-nowrap opacity-0 group-hover:opacity-100 transition pointer-events-none">
             where the commits actually live
           </span>

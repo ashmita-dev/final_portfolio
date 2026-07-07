@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
-import { about, timeline } from "../data/portfolioData";
+import StatsCounter from "../components/StatsCounter";
+import { about, timeline, stats } from "../data/portfolioData";
 import Timeline from "../components/Timeline";
+import GithubActivity from "../components/GithubActivity";
 
 function About() {
   return (
-    <section id="about" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
+    <section
+      id="about"
+      className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-amber-900/20 via-neutral-950 to-neutral-950" />
       <div className="absolute w-[550px] h-[550px] bg-amber-600/20 rounded-full blur-[100px] -top-20 -right-40" />
       <div className="absolute w-96 h-96 bg-amber-500/20 rounded-full blur-[100px] bottom-10 -left-20" />
@@ -79,7 +84,12 @@ function About() {
         Milestones
       </motion.h3>
 
+      <StatsCounter stats={stats} />
+
       <Timeline items={timeline} />
+      <div className="mt-16 flex justify-center w-full">
+        <GithubActivity username="ashmita-dev" />
+      </div>
     </section>
   );
 }

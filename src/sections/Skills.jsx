@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { skills } from "../data/portfolioData";
+import { skills, skillLevels } from "../data/portfolioData";
 import TechStack from "../components/TechStack";
+import SkillBars from "../components/SkillBars";
 
 const categories = [
   { label: "Frontend", items: skills.frontend },
@@ -82,6 +83,9 @@ function Skills() {
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className="relative mt-16 flex justify-center w-full">
+        <SkillBars levels={skillLevels} />
       </div>
 
       <motion.p

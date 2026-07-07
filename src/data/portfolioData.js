@@ -89,33 +89,54 @@ export const achievements = [
 
 export const timeline = [
   {
-    year: "Expected 2028",
+    label: "Education",
     title: "B.Tech in Computer Science",
     subtitle: "SVKM's NMIMS MPSTME, Shirpur Campus",
     type: "education",
+    certificate: null,
   },
   {
-    year: "Ongoing",
+    label: "Certification",
     title: "JP Morgan Chase Software Engineering Virtual Experience",
     subtitle: "Forage",
     type: "certification",
+    certificate: "/certificates/jpmorgan.png",
   },
   {
-    year: "Ongoing",
+    label: "Certification",
     title: "Microsoft Learn Cloud Computing Certifications & Badges",
     subtitle: "Microsoft Learn",
     type: "certification",
+    certificate: "/certificates/microsoft-learn.png",
   },
   {
-    year: "Recent",
+    label: "Achievement",
     title: "Second Prize — Python Mini Project Competition",
     subtitle: "College Competition",
     type: "achievement",
+    certificate: "/certificates/python-mini-project.png",
   },
   {
-    year: "Recent",
+    label: "Achievement",
     title: "Yugantar 2.0 Inter-Institute Hackathon",
     subtitle: "SIH 2025 Round-1 Selection",
     type: "achievement",
+    certificate: "/certificates/yugantar-hackathon.png",
   },
 ];
+
+export const stats = [
+  { value: 15, suffix: "+", label: "REST APIs Built" },
+  { value: 3, suffix: "", label: "Major Projects Shipped" },
+  { value: 40, suffix: "+", label: "SQL Queries Written" },
+  { value: 12, suffix: "+", label: "Relational Tables Designed" },
+];
+
+export const skillLevels = [
+  { label: "Frontend Development", value: 88 },
+  { label: "Backend Development", value: 80 },
+  { label: "Database Design", value: 78 },
+  { label: "Tools & Workflow", value: 85 },
+];
+
+export const currentlyBuilding = "Polishing this portfolio (yes, really)";

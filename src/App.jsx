@@ -9,6 +9,10 @@ import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import CustomCursor from "./components/CustomCursor";
 import ScrollToTop from "./components/ScrollToTop";
+import CommandPalette from "./components/CommandPalette";
+import NowWidget from "./components/NowWidget";
+import EasterEgg from "./components/EasterEgg";
+import Marquee from "./components/Marquee";
 
 function App() {
   return (
@@ -19,6 +23,16 @@ function App() {
       <Navbar />
       <Avatar />
       <Hero />
+      <Marquee
+        items={[
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "Express",
+          "Tailwind",
+          "JavaScript",
+        ]}
+      />
       <SectionDivider />
       <About />
       <SectionDivider />
@@ -27,6 +41,9 @@ function App() {
       <Projects />
       <SectionDivider />
       <Contact />
+      <CommandPalette />
+      <NowWidget />
+      <EasterEgg />
     </div>
   );
 }
