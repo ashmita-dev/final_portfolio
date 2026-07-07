@@ -12,10 +12,12 @@ import CommandPalette from "./components/CommandPalette";
 import EasterEgg from "./components/EasterEgg";
 import Marquee from "./components/Marquee";
 import RobotMascot from "./components/RobotMascot";
+import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
     <div className="bg-neutral-950 relative">
+      <ScrollProgress />
       <CursorGlow />
       <CustomCursor />
       <ScrollToTop />
