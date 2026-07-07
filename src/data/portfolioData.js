@@ -158,4 +158,4 @@ export const skillLevels = [
   { label: "Tools & Workflow", value: 85 },
 ];
 
-export const currentlyBuilding = "Polishing this portfolio (yes, really)";
+export const currentlyBuilding = "Open to online internships";

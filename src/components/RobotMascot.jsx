@@ -1,32 +1,67 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const sectionLines = {
-  hero: "Beep boop. Full stack. No small talk.",
-  about: "Fun fact: I run on coffee and console.log statements.",
-  skills: "I've read the docs. Mostly. Some of them.",
-  projects: "Built by her. Occasionally fixed by me at 2am.",
-  contact: "Send a message. I promise I'm friendlier than I look.",
+  hero: [
+    "Beep boop. Full stack. No small talk.",
+    "01001000 01101001 — that's 'hi' in binary. You're welcome.",
+    "Loading personality... 100% done.",
+  ],
+  about: [
+    "Fun fact: I run on coffee and console.log statements.",
+    "CS degree: real. Social battery: still compiling.",
+    "I contain approximately 40% Stack Overflow tabs.",
+  ],
+  skills: [
+    "I've read the docs. Mostly. Some of them.",
+    "React? Fluent. Small talk? Still debugging.",
+    "My stack is stable. My sleep schedule is not.",
+  ],
+  projects: [
+    "Built by her. Occasionally fixed by me at 2am.",
+    "Every bug here was once someone's 'quick fix.'",
+    "Warning: contains real code and real chaos.",
+  ],
+  contact: [
+    "Send a message. I promise I'm friendlier than I look.",
+    "Her inbox has better uptime than most APIs.",
+    "Beep. Boop. Please hire the human, not the robot.",
+  ],
 };
 
 function RobotMascot() {
-  const [line, setLine] = useState(sectionLines.hero);
+  const [currentSection, setCurrentSection] = useState("hero");
+  const [line, setLine] = useState(sectionLines.hero[0]);
   const [blink, setBlink] = useState(false);
+  const observerRef = useRef(null);
 
   useEffect(() => {
-    const sections = ["hero", "about", "skills", "projects", "contact"];
-    const handleScroll = () => {
-      const scrollPos = window.scrollY + window.innerHeight / 2;
-      let current = "hero";
-      sections.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollPos) current = id;
-      });
-      setLine(sectionLines[current]);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const ids = ["hero", "about", "skills", "projects", "contact"];
+    const elements = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCurrentSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    elements.forEach((el) => observerRef.current.observe(el));
+
+    return () => observerRef.current?.disconnect();
   }, []);
+
+  useEffect(() => {
+    const options = sectionLines[currentSection] || sectionLines.hero;
+    const random = options[Math.floor(Math.random() * options.length)];
+    setLine(random);
+  }, [currentSection]);
 
   useEffect(() => {
     const blinkInterval = setInterval(() => {
@@ -61,24 +96,16 @@ function RobotMascot() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Robot SVG */}
           <svg width="150" height="170" viewBox="0 0 150 170" className="drop-shadow-2xl">
-            {/* Antenna */}
             <motion.circle
               cx="75" cy="14" r="6" fill="#F59E0B"
               animate={{ opacity: [1, 0.4, 1] }}
               transition={{ duration: 1.6, repeat: Infinity }}
             />
             <line x1="75" y1="20" x2="75" y2="34" stroke="#78716C" strokeWidth="3" />
-
-            {/* Head */}
             <rect x="30" y="34" width="90" height="72" rx="24" fill="#E7E5E4" />
             <rect x="30" y="34" width="90" height="72" rx="24" fill="url(#headGradient)" opacity="0.5" />
-
-            {/* Face screen */}
             <rect x="42" y="50" width="66" height="42" rx="14" fill="#1C1917" />
-
-            {/* Eyes */}
             {blink ? (
               <>
                 <rect x="58" y="68" width="14" height="3" rx="1.5" fill="#F59E0B" />
@@ -90,17 +117,11 @@ function RobotMascot() {
                 <circle cx="85" cy="70" r="7" fill="#F59E0B" />
               </>
             )}
-
-            {/* Cheek glow */}
             <circle cx="46" cy="82" r="5" fill="#FB923C" opacity="0.5" />
             <circle cx="104" cy="82" r="5" fill="#FB923C" opacity="0.5" />
-
-            {/* Body */}
             <rect x="40" y="106" width="70" height="54" rx="18" fill="#D6D3D1" />
             <rect x="55" y="120" width="40" height="26" rx="8" fill="#F59E0B" opacity="0.85" />
             <circle cx="75" cy="133" r="6" fill="#1C1917" opacity="0.6" />
-
-            {/* Arms */}
             <motion.rect
               x="18" y="112" width="16" height="34" rx="8" fill="#D6D3D1"
               animate={{ rotate: [0, -8, 0] }}
@@ -108,7 +129,6 @@ function RobotMascot() {
               style={{ transformOrigin: "26px 116px" }}
             />
             <rect x="116" y="112" width="16" height="34" rx="8" fill="#D6D3D1" />
-
             <defs>
               <linearGradient id="headGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.3" />
