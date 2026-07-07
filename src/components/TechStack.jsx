@@ -22,6 +22,7 @@ import {
 
 import { Code2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { SiFramer, SiGreensock } from "react-icons/si";
 
 const iconMap = {
   "React.js": { icon: SiReact, color: "#61DAFB" },
@@ -46,6 +47,9 @@ const iconMap = {
   "JWT Authentication": { icon: Code2, color: "#F5F5F5" },
   "React Router": { icon: SiReact, color: "#CA4245" },
   "VS Code": { icon: Code2, color: "#007ACC" },
+  "Framer Motion": { icon: SiFramer, color: "#0055FF" },
+  "GSAP": { icon: SiGreensock, color: "#88CE02" },
+  "Vercel": { icon: Code2, color: "#F5F5F5" },
 };
 
 function TechStack({ items }) {

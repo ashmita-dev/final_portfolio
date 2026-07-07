@@ -47,13 +47,12 @@ export const about = {
 };
 
 export const skills = {
-  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Tailwind CSS", "React Router", "Vite"],
+  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Tailwind CSS", "React Router", "Vite", "Framer Motion", "GSAP"],
   backend: ["Node.js", "Express.js", "REST APIs", "JWT Authentication"],
   database: ["PostgreSQL", "Microsoft SQL Server", "SQL"],
-  tools: ["Git", "GitHub", "VS Code", "Postman"],
+  tools: ["Git", "GitHub", "VS Code", "Postman", "Vercel"],
   languages: ["JavaScript", "Java", "Python", "C++", "SQL"],
 };
-
 export const projects = [
   {
     id: 1,
@@ -155,7 +154,7 @@ export const skillLevels = [
   { label: "Frontend Development", value: 88 },
   { label: "Backend Development", value: 80 },
   { label: "Database Design", value: 78 },
-  { label: "Tools & Workflow", value: 85 },
+  { label: "Animation & Motion Design", value: 82 },
 ];
 
 export const currentlyBuilding = "Open to online internships";
