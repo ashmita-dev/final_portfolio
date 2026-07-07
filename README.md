@@ -2,7 +2,7 @@
 
 A modern, interactive portfolio built from scratch to showcase my work as a **Computer Science student** and **Full Stack Developer**. Rather than relying on templates, every section, animation, and interaction was designed and implemented with a focus on performance, responsiveness, and user experience.
 
-**🌐 Live Demo:** *Add your Vercel URL here*
+**🌐 Live Demo:** final-portfolio-liard-sigma.vercel.app
 **📧 Email:** [ashmita110609@gmail.com](mailto:ashmita110609@gmail.com)
 
 ---
