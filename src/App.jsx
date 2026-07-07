@@ -8,12 +8,14 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import CustomCursor from "./components/CustomCursor";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="bg-neutral-950 relative">
       <CursorGlow />
       <CustomCursor />
+      <ScrollToTop />
       <Navbar />
       <Avatar />
       <Hero />

@@ -7,7 +7,7 @@ export const personalInfo = {
   location: "India",
   github: "https://github.com/ashmita-dev",
   linkedin: "https://www.linkedin.com/in/ashmita-mazumdar-009863394/",
-  resume: "https://github.com/ashmita-dev",
+  resume: "/Ashmita_Mazumdar_Resume .pdf",
 };
 
 export const about = {
