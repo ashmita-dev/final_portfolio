@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import CommandPalette from "./components/CommandPalette";
 import EasterEgg from "./components/EasterEgg";
 import Marquee from "./components/Marquee";
+import RobotMascot from "./components/RobotMascot";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <Contact />
       <CommandPalette />
       <EasterEgg />
+      <RobotMascot />
     </div>
   );
 }

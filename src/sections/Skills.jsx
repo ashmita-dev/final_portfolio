@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { skills, skillLevels } from "../data/portfolioData";
 import TechStack from "../components/TechStack";
 import SkillBars from "../components/SkillBars";
+import ScrambleText from "../components/ScrambleText";
+import GradientMesh from "../components/GradientMesh";
 
 const categories = [
   { label: "Frontend", items: skills.frontend },
@@ -23,8 +25,7 @@ function Skills() {
   return (
     <section id="skills" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-neutral-950 to-neutral-950" />
-      <div className="absolute w-[450px] h-[450px] bg-amber-600/20 rounded-full blur-[100px] top-1/4 -left-32" />
-      <div className="absolute w-96 h-96 bg-amber-500/20 rounded-full blur-[100px] -bottom-20 right-0" />
+      <GradientMesh />
       <div className="absolute inset-0 opacity-[0.1]" style={{
         backgroundImage: "linear-gradient(rgba(245,158,11,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.25) 1px, transparent 1px)",
         backgroundSize: "50px 50px"
@@ -37,7 +38,7 @@ function Skills() {
         transition={{ duration: 0.6 }}
         className="relative text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
-        Skills
+        <ScrambleText text="Skills" />
       </motion.h2>
 
       <motion.p

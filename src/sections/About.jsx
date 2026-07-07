@@ -4,14 +4,14 @@ import Timeline from "../components/Timeline";
 import StatsCounter from "../components/StatsCounter";
 import GithubActivity from "../components/GithubActivity";
 import TiltCard from "../components/TiltCard";
+import ScrambleText from "../components/ScrambleText";
+import GradientMesh from "../components/GradientMesh";
 
 function About() {
   return (
     <section id="about" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-amber-900/20 via-neutral-950 to-neutral-950" />
-      <div className="absolute w-[550px] h-[550px] bg-amber-600/20 rounded-full blur-[100px] -top-20 -right-40" />
-      <div className="absolute w-96 h-96 bg-amber-500/20 rounded-full blur-[100px] bottom-10 -left-20" />
-      <div className="absolute w-64 h-64 bg-orange-500/15 rounded-full blur-[80px] top-1/2 right-1/3" />
+      <GradientMesh />
 
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ function About() {
         transition={{ duration: 0.6 }}
         className="relative text-4xl font-bold mb-10 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
-        About Me
+        <ScrambleText text="About Me" />
       </motion.h2>
 
       <motion.p

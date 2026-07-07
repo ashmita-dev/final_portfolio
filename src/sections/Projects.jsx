@@ -4,6 +4,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "../data/portfolioData";
 import TiltCard from "../components/TiltCard";
+import ScrambleText from "../components/ScrambleText";
+import GradientMesh from "../components/GradientMesh";
+import MagneticPreview from "../components/MagneticPreview";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -124,8 +127,7 @@ function Projects() {
       className="relative bg-neutral-950 overflow-hidden md:h-screen flex flex-col justify-center"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-amber-900/20 via-neutral-950 to-neutral-950" />
-      <div className="absolute w-[500px] h-[500px] bg-amber-600/20 rounded-full blur-[100px] top-10 right-1/4" />
-      <div className="absolute w-72 h-72 bg-amber-500/20 rounded-full blur-[100px] bottom-0 left-10" />
+      <GradientMesh />
 
       <div className="relative px-6 md:px-16 pt-24 md:pt-0 pb-8 md:pb-12">
         <motion.h2
@@ -135,7 +137,7 @@ function Projects() {
           transition={{ duration: 0.6 }}
           className="text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
         >
-          Projects
+          <ScrambleText text="Projects" />
         </motion.h2>
 
         <motion.p
@@ -154,7 +156,9 @@ function Projects() {
         className="relative flex flex-col md:flex-row gap-8 md:gap-0 px-6 md:px-16 pb-16 md:pb-0"
       >
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <MagneticPreview key={project.id} project={project}>
+            <ProjectCard project={project} />
+          </MagneticPreview>
         ))}
       </div>
     </section>

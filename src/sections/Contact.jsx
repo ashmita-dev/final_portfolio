@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/portfolioData";
 import MagneticButton from "../components/MagneticButton";
+import ScrambleText from "../components/ScrambleText";
+import GradientMesh from "../components/GradientMesh";
+
 
 function Contact() {
   return (
     <section id="contact" className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center px-6 py-24 text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900/25 via-neutral-950 to-neutral-950" />
-      <div className="absolute w-[500px] h-[500px] bg-amber-500/25 rounded-full blur-[100px] top-1/3 left-1/2 -translate-x-1/2" />
-      <div className="absolute w-72 h-72 bg-orange-500/15 rounded-full blur-[90px] bottom-0 right-1/4" />
+      <GradientMesh />
 
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -16,7 +18,7 @@ function Contact() {
         transition={{ duration: 0.6 }}
         className="relative text-4xl font-bold mb-4 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent"
       >
-        Let's Connect
+        <ScrambleText text="Let's Connect" />
       </motion.h2>
 
       <motion.p
